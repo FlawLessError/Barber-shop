@@ -1,9 +1,16 @@
+import { Fragment } from "react/jsx-runtime";
+import Banner from "../components/Banner";
+import PrimaryNav from "../components/PrimaryNav";
+import HomeMainContent from "../components/HomePageSections/HomeMainContent";
+import ContentInfo from "../components/ContentInfo";
+
 export default function HomePage() {
   return (
-    <header>
-      <h1 className="fs-900 ff-base clr-primary-400 uppercase">
-        Hello everybody my name is Markiplier
-      </h1>
-    </header>
+    <Fragment>
+      <PrimaryNav />
+      <Banner />
+      <HomeMainContent />
+      <ContentInfo />
+    </Fragment>
   );
 }

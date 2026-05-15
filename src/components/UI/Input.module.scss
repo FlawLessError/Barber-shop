@@ -1,0 +1,25 @@
+@use "../../sass/abstracts/" as *;
+
+.label {
+  &__name {
+    display: block;
+    font-weight: $fw-600;
+
+    span {
+      font-weight: $fw-400;
+    }
+  }
+
+  &__input {
+    border: rem(3) solid $color-primary-300;
+    border-radius: $border-radius-1;
+    padding: $size-3;
+    width: 100%;
+    font-weight: $fw-600;
+
+    &::placeholder {
+      color: $color-primary-300;
+      font-weight: $fw-600;
+    }
+  }
+}

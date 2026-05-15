@@ -1,0 +1,12 @@
+@use "../../sass/abstracts/" as *;
+
+.card {
+  padding: $size-8;
+  background-color: $color-primary-100;
+  border-radius: $border-radius-2;
+
+  &__title {
+    @include heading($fs-600, $color-primary-700);
+    margin-block-end: $size-2;
+  }
+}

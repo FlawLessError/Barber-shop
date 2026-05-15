@@ -1,0 +1,58 @@
+@use "../../sass/abstracts/" as *;
+
+.hours {
+  padding-block: $section-padding-block;
+  text-align: center;
+
+  &__title {
+    @include heading($fs-800);
+    padding-block-end: $size-5;
+  }
+
+  &__subTitle {
+    font-size: $fs-600;
+    padding-block-end: $size-11;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: $size-8;
+
+    & > div {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      div {
+        padding-inline: $size-8;
+      }
+    }
+
+    & > div::before,
+    & > div::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 20px;
+      background-color: gray;
+    }
+
+    & > div::before {
+      left: -1px;
+    }
+
+    & > div::after {
+      right: 0;
+    }
+  }
+
+  &__days {
+    @include heading($fs-700, $color-primary-400);
+  }
+
+  &__hours {
+    font-size: $fs-500;
+  }
+}

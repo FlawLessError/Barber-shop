@@ -1,0 +1,12 @@
+@use "../../sass/abstracts/" as *;
+
+.services {
+  padding-block: $section-padding-block;
+  background-color: $color-primary-200;
+  text-align: center;
+
+  &__title {
+    @include heading($fs-800);
+    margin-block-end: $size-11;
+  }
+}

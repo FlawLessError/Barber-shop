@@ -1,0 +1,30 @@
+@use "../../sass/abstracts/" as *;
+
+.pricing {
+  padding-block: $section-padding-block;
+  background-color: $color-primary-200;
+  text-align: center;
+
+  &__title {
+    @include heading($fs-800);
+    margin-block-end: clamp($size-10, 0.5rem + 8vw, $size-12);
+  }
+
+  &__container {
+    display: grid;
+    gap: $size-11 $size-14;
+    grid-template-columns: 1fr;
+
+    @include mq(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    h3 {
+      @include heading($fs-700, $color-primary-400);
+    }
+    p {
+      margin-block-start: $size-2;
+      @include heading($fs-600, $color-primary-700);
+    }
+  }
+}

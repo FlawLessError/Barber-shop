@@ -1,0 +1,37 @@
+@use "../sass/abstracts" as *;
+
+.primaryNav {
+  padding-block: $size-8;
+  background-color: $color-primary-800;
+
+  & > div {
+    @include flex-group($flex-row-gap: $size-8) {
+      justify-content: center;
+      text-align: center;
+      @include mq(md) {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__listItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $size-9;
+
+    a {
+      @include heading($fs-400, $color-neutral-100);
+      transition: 200ms ease-out;
+
+      &:is(:hover, :focus) {
+        color: $color-accent-400;
+      }
+    }
+
+    @include mq(md) {
+      margin-inline-start: auto;
+    }
+  }
+}

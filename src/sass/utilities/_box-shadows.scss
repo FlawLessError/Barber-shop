@@ -1,5 +1,12 @@
 @use "../abstracts/" as *;
 
 .box-shadow-1 {
-  box-shadow: 0 0 size(12) rgb(black, 0.25);
+  box-shadow: 0 0 rem(6) rgb(black, 0.25);
+}
+
+.box-shadow-2 {
+  box-shadow:
+    0 0 rem(12) rgb(black, 0.25),
+    0 0 rem(8) rgb(black, 0.25),
+    0 0 rem(4) rgb(black, 0.25);
 }

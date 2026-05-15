@@ -1,0 +1,44 @@
+@use "../sass/abstracts/" as *;
+
+.banner {
+  padding-block: $hero-padding-block;
+  --grid-gap: #{$size-10};
+
+  &__content {
+    display: flex;
+    gap: $size-5;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $size-5;
+    }
+
+    @include mq(md) {
+      align-items: start;
+      text-align: left;
+
+      & > div {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__pageTitle {
+    @include heading($fs-900);
+  }
+
+  &__desc > strong {
+    font-weight: $fw-700;
+  }
+
+  &__img {
+    margin-inline: auto;
+    border-radius: $border-radius-2;
+  }
+}

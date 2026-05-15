@@ -1,0 +1,38 @@
+@use "../../sass/abstracts/" as *;
+
+.bookApp {
+  padding-block: $section-padding-block;
+
+  & > header {
+    text-align: center;
+    margin-block-end: $size-11;
+  }
+
+  &__title {
+    @include heading($fs-800);
+  }
+
+  &__subTitle {
+    font-size: $fs-600;
+  }
+
+  &__form {
+    display: grid;
+    gap: $size-2 $size-8;
+
+    button {
+      width: 100%;
+      margin-block-start: $size-6;
+    }
+
+    @include mq(md) {
+      grid-template-columns: 1fr 1fr;
+
+      button {
+        width: fit-content;
+        grid-column: 2;
+        margin-left: auto;
+      }
+    }
+  }
+}

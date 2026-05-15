@@ -1,0 +1,52 @@
+@use "../sass/abstracts/" as *;
+
+.parent {
+  position: relative;
+}
+
+.toggleTheme {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  border-radius: $border-radius-2;
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+
+  transition: 250ms ease-out all;
+
+  &[data-theme="day"] {
+    stroke: $color-primary-100;
+
+    &:is(:hover, :focus) {
+      stroke: $color-primary-900;
+      background-color: $color-primary-100;
+    }
+  }
+  &[data-theme="night"] {
+    color: $color-primary-300;
+
+    &:is(:hover, :focus) {
+      background-color: $color-primary-300;
+      color: $color-primary-900;
+    }
+  }
+}
+
+.roll {
+  animation: rollOver 200ms ease-in-out;
+}
+
+@keyframes rollOver {
+  0% {
+    opacity: 1;
+    transform: rotateZ(0);
+  }
+  50% {
+    opacity: 0;
+    transform: rotateZ(90);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateZ(180);
+  }
+}

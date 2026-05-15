@@ -1,0 +1,33 @@
+@use "../../sass/abstracts/" as *;
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  background-color: red;
+  text-decoration: none;
+  width: fit-content;
+  border: 0;
+  border-radius: $border-radius-1;
+  padding: $size-3 $size-8;
+  font-family: $ff-sans;
+  font-weight: $fw-700;
+  font-size: $fs-600;
+
+  transition: 200ms ease-in-out background-color;
+
+  &[data-type="accent"] {
+    color: $color-neutral-100;
+    background-color: $color-accent-500;
+    &:is(:hover, :focus) {
+      background-color: $color-accent-400;
+    }
+  }
+
+  &[data-type="primary"] {
+    color: $color-neutral-100;
+    background-color: $color-primary-700;
+    &:is(:hover, :focus) {
+      background-color: $color-primary-800;
+    }
+  }
+}

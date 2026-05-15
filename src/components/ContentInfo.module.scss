@@ -1,0 +1,19 @@
+@use "../sass/abstracts/" as *;
+
+.contentInfo {
+  padding-block: $size-8;
+  background-color: $color-primary-800;
+  text-align: center;
+
+  color: $color-primary-300;
+
+  &__phone {
+    display: inline-block;
+    @include heading($fs-400, $color-neutral-100);
+    transition: 200ms ease-out;
+
+    &:is(:hover, :focus) {
+      color: $color-accent-400;
+    }
+  }
+}
