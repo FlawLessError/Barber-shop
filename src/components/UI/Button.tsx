@@ -1,4 +1,4 @@
-import styles from "./button.module.scss";
+import styles from "./Button.module.scss";
 
 import { type ComponentPropsWithoutRef, type ReactNode } from "react";
 
