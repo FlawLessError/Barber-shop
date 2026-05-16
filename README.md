@@ -1,50 +1,18 @@
-# React + TypeScript + Vite
+# The Barber Shop Web Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a design project made with React, TypeScript, Vite, and also SCSS template for organized styling.
 
-Currently, two official plugins are available:
+<img width="2202" height="1357" alt="image" src="https://github.com/user-attachments/assets/b5f09c03-fd4b-4afa-8745-96ae05689bd2" />
+<img width="1885" height="1329" alt="image" src="https://github.com/user-attachments/assets/1d0fcfc7-7c39-4ccf-9cf3-52efe5e8f9cc" />
+<img width="1601" height="1159" alt="image" src="https://github.com/user-attachments/assets/e5b6cf10-dc94-41e9-b612-3c2dbb1e17da" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+**Link to project:** [demo](https://the-barber-shop.flawlesserrordev.workers.dev)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## How It's Made:
 
-- Configure the top-level `parserOptions` property like this:
+**Tech used:** HTML, SCSS, Post-CSS, TypeScript, React, React-Router
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Lessons Learned:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Great experience on organizing css code using SASS, and learning how to create a template to reuse in future projects. I also learn to make the web site accessable to verity of users using the a11y methods.
